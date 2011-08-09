@@ -1,0 +1,15 @@
+== Forum_post_v0.2/ GemPlugin
+
+the gem used to get the forum post
+
+install:
+gem install forum_post
+example:
+require 'rubygems'
+require 'forum_post'
+require 'open-uri'
+uri='http://topic.csdn.net/u/20110718/17/f1a523fb-8c65-4510-a094-daf7bd2698cf.html?50656'
+source=open(uri).read
+doc=ForumPost::Document.new(source)
+puts doc.content
+
